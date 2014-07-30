@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WeatherLib-1.5.2/WeatherLib-1.5.2/OkHttpClient/OkHttpClient.iml" filepath="$PROJECT_DIR$/WeatherLib-1.5.2/WeatherLib-1.5.2/OkHttpClient/OkHttpClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Shake2Cool.iml" filepath="$PROJECT_DIR$/Shake2Cool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WeatherLib-1.5.2/WeatherLib-1.5.2/lib/lib.iml" filepath="$PROJECT_DIR$/WeatherLib-1.5.2/WeatherLib-1.5.2/lib/lib.iml" />
+    </modules>
+  </component>
+</project>
+

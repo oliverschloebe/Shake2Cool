@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Shake2Cool</string>
+    <string name="notice_bottom">Shake the device to cool down your device and environment</string>
+    <string name="temperature_val">...</string>
+    <string name="temperature_unit">-</string>
+
+</resources>

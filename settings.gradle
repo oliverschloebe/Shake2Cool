@@ -1,0 +1,3 @@
+include ':app', ':lib', ':OkHttpClient'
+project(':lib').projectDir = new File('WeatherLib-1.5.2/WeatherLib-1.5.2/lib')
+project(':OkHttpClient').projectDir = new File('WeatherLib-1.5.2/WeatherLib-1.5.2/OkHttpClient')

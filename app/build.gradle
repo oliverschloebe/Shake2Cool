@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        maven { url 'http://download.crashlytics.com/maven' }
+    }
+
+    dependencies {
+        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+repositories {
+    maven { url 'http://download.crashlytics.com/maven' }
+}
+
+apply plugin: 'crashlytics'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        applicationId "app.shake2cool.schloebe.de.shake2cool"
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionCode 2
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:19.+'
+    compile 'com.survivingwithandroid:weatherlib:1.5.2'
+    compile 'com.crashlytics.android:crashlytics:1.+'
+    compile 'com.loopj.android:android-async-http:1.4.5'
+    //compile 'com.survivingwithandroid:weatherlib_okhttpclient:1.5.2'
+    //compile 'com.squareup.okhttp:okhttp:2.0.+'
+    //compile 'com.google.android.gms:play-services:5.0.77' // See sdk\extras\google\m2repository\com\google\android\gms\play-services for latest version
+}

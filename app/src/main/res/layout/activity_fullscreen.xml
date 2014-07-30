@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FullscreenActivity">
+
+    <ImageView android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg"
+        android:alpha="0.7"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100">
+
+        <TextView android:id="@+id/temperature_content_val"
+            style="@style/tempVal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:keepScreenOn="true"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:alpha="0.6"
+            android:gravity="center|bottom"
+            android:text="@string/temperature_val" />
+
+        <TextView android:id="@+id/temperature_content_unit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:keepScreenOn="true"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:alpha="0.4"
+            android:textSize="50sp"
+            android:gravity="center|top"
+            android:text="@string/temperature_unit" />
+
+    </LinearLayout>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button android:id="@+id/notice_bottom"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/notice_bottom"
+                android:clickable="false"
+                android:padding="20sp"
+                android:enabled="true"
+                android:focusable="false"
+                android:textSize="@dimen/button_fontsize" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
